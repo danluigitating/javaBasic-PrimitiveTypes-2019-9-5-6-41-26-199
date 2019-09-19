@@ -15,7 +15,7 @@ class FloatingTypeTest {
 
         // TODO: Please change the result to pass the test.
         // <!--start
-        final int expected = Integer.MAX_VALUE;
+        final int expected = 2;
         // --end-->
 
         assertEquals(expected, integer);
@@ -28,7 +28,6 @@ class FloatingTypeTest {
         assertTrue(isInfinity(-1d / 0d));
         assertFalse(isInfinity(2d));
         assertFalse(isInfinity(Double.NaN));
-
         assertTrue(isNan(0d / 0d));
         assertFalse(isNan(Double.NEGATIVE_INFINITY));
         assertFalse(isNan(Double.POSITIVE_INFINITY));
@@ -41,7 +40,7 @@ class FloatingTypeTest {
 
         // TODO: Please change the result to pass the test.
         // <!--start
-        final int expected = Integer.MAX_VALUE;
+        final int expected = 2;
         // --end-->
 
         assertEquals(expected, integer);
@@ -54,21 +53,27 @@ class FloatingTypeTest {
 
         // TODO: Please call some method to round the floating point number.
         // <!--start
-        final long rounded = Long.MAX_VALUE;
+        final long rounded = roundNumber(floatingPointNumber);
         // --end-->
 
         assertEquals(3L, rounded);
     }
 
-    @SuppressWarnings("unused")
-    private boolean isNan(double realNumber) {
-        // TODO: please find the method that performs this operation.
-        throw new NotImplementedException();
+    private long roundNumber(double realNumber) {
+        return Math.round(realNumber);
     }
 
-    @SuppressWarnings("unused")
+    private boolean isNan(double realNumber) {
+        if(Double.isNaN(realNumber))
+            return true;
+        else
+            return false;
+    }
+
     private boolean isInfinity(double realNumber) {
-        // TODO: please find the method that perform this operation.
-        throw new NotImplementedException();
+        if(Double.isInfinite(realNumber))
+            return true;
+        else
+            return false;
     }
 }

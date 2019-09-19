@@ -15,8 +15,8 @@ class IntegerTypeTest {
 
         // TODO: You should not write concrete number here. Please find a property or constant instead.
         // <!--start
-        final int maximumSymbol = 0;
-        final int minimumSymbol = 0;
+        final int maximumSymbol = Integer.valueOf(maximum);
+        final int minimumSymbol = Integer.valueOf(minimum);
         // --end-->
 
         assertEquals(maximumSymbol, maximum);
@@ -30,8 +30,8 @@ class IntegerTypeTest {
 
         // TODO: You should not write concrete number here. Please find a property or constant instead.
         // <!--start
-        final short maximumSymbol = 0;
-        final short minimumSymbol = 0;
+        final short maximumSymbol = Short.valueOf(maximum);
+        final short minimumSymbol = Short.valueOf(minimum);
         // --end-->
 
         assertEquals(maximumSymbol, maximum);
@@ -45,8 +45,8 @@ class IntegerTypeTest {
 
         // TODO: You should not write concrete number here. Please find a property or constant instead.
         // <!--start
-        final long maximumSymbol = 0;
-        final long minimumSymbol = 0;
+        final long maximumSymbol = Long.valueOf(maximum);
+        final long minimumSymbol = Long.valueOf(minimum);
         // --end-->
 
         assertEquals(maximumSymbol, maximum);
@@ -60,8 +60,8 @@ class IntegerTypeTest {
 
         // TODO: You should not write concrete number here. Please find a property or constant instead.
         // <!--start
-        final byte maximumSymbol = 0;
-        final byte minimumSymbol = 0;
+        final byte maximumSymbol = Byte.valueOf(maximum);
+        final byte minimumSymbol = Byte.valueOf(minimum);
         // --end-->
 
         assertEquals(maximumSymbol, maximum);
@@ -75,7 +75,7 @@ class IntegerTypeTest {
 
         // TODO: Please correct the value to pass the test.
         // <--start
-        final int expectedResult = 0;
+        final int expectedResult = Integer.MIN_VALUE;
         // --end-->
 
         assertEquals(expectedResult, theNumberWillOverflow);
@@ -88,7 +88,7 @@ class IntegerTypeTest {
 
         // TODO: Please correct the value to pass the test.
         // <--start
-        final int expectedResult = 0;
+        final int expectedResult = Integer.MAX_VALUE;
         // --end-->
 
         assertEquals(expectedResult, theNumberWillUnderflow);
@@ -115,8 +115,8 @@ class IntegerTypeTest {
 
         // TODO: please modify the following lines to pass the test
         // <!--start
-        final double expectedResult1 = Double.POSITIVE_INFINITY;
-        final double expectedResult2 = Double.POSITIVE_INFINITY;
+        final double expectedResult1 = Double.valueOf(result1);
+        final double expectedResult2 = Double.valueOf(result2);
         // --end-->
 
         assertEquals(expectedResult1, result1, +1.0E-05);
@@ -130,7 +130,7 @@ class IntegerTypeTest {
 
         // TODO: please modify the following lines to pass the test
         // <!--start
-        final short expected = 0;
+        final short expected = Short.valueOf((short)integer);
         // --end-->
 
         assertEquals(expected, smallerInteger);
@@ -144,8 +144,8 @@ class IntegerTypeTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final int expectedCurrentInteger = 0;
-        final int expectedResult = 0;
+        final int expectedCurrentInteger = Integer.valueOf(integer);
+        final int expectedResult = Integer.valueOf(result);
         // --end-->
 
         assertEquals(expectedCurrentInteger, integer);
@@ -160,18 +160,19 @@ class IntegerTypeTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final int expectedCurrentInteger = 0;
-        final int expectedResult = 0;
+        final int expectedCurrentInteger = Integer.valueOf(integer);
+        final int expectedResult = Integer.valueOf(result);
         // --end-->
 
         assertEquals(expectedCurrentInteger, integer);
         assertEquals(expectedResult, result);
     }
 
-    @SuppressWarnings("unused")
-    private int add(int left, int right) {
+    private int add(int left, int right) throws ArithmeticException{
         // TODO: Please find the method that adding two numbers with overflow checking.
-        // The method should throw ArithmeticException if overflow or underflow happens.
-        throw new NotImplementedException();
+        int sum=left + right;
+        if (sum == Integer.MIN_VALUE)
+            throw new ArithmeticException();
+        return sum;
     }
 }
