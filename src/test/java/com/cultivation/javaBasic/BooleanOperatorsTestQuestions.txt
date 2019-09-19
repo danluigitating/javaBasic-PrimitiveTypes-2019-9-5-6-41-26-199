@@ -1,0 +1,12 @@
+What is the knowledge point of the test? Where is the official document to the knowledge point?
+Bitwise operators are used to perform manipulation of individual bits of a number. They can be used with any of the integral types (char, short, int, etc). 
+https://www.geeksforgeeks.org/bitwise-operators-in-java/
+
+Why the test failed at first?
+The test failed because the array for comparing results is empty.
+
+Why you corrected the test that way?
+I corrected the test by manually inputting the expected value when doing the operations.
+
+Do you have further questions on this knowledge point?
+None

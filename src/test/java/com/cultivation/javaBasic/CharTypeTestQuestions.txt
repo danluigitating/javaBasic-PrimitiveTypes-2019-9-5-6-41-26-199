@@ -1,0 +1,12 @@
+What is the knowledge point of the test? Where is the official document to the knowledge point?
+It is defined in the Java documentation.
+http://docs.oracle.com/javase/tutorial/java/data/characters.html
+
+Why the test failed at first?
+The test failed becuse the values are set to an empty string.
+
+Why you corrected the test that way?
+I have to fill-up the variables with the right escape characters.
+
+Do you have further questions on this knowledge point?
+None

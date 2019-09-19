@@ -1,0 +1,10 @@
+What is the knowledge point of the test? Where is the official document to the knowledge point?
+https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html
+Why the test failed at first?
+Some of the test cases failed because the value for comparison is not defined or the method for checking is not defined. 
+
+Why you corrected the test that way?
+I corrected the test cases by manually filling up the expected results and completing the missing methods.
+
+Do you have further questions on this knowledge point?
+None
